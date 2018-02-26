@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="DPRS"
+            id="DPRS">
+      </category>
+      <view
+            name="Recommendation System"
+            inject="true"
+            icon="icons/sample.png"
+            category="DPRS"
+            class="dprs.views.SampleView"
+            id="dprs.views.SampleView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.ProblemView"
+               relationship="right"
+               id="dprs.views.SampleView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+   
+   <extension point="org.eclipse.ui.menus">
+      <menuContribution
+         locationURI="popup:org.eclipse.ui.navigator.ProjectExplorer#PopupMenu?after=additions">
+         <command
+               commandId="dprs.views.RunDPRS"
+               icon="icons/sample.png"
+               label="DPRS"
+               mnemonic="M1+P"
+               tooltip="Do something with this project">
+         </command>
+      </menuContribution>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="dprs.views.DPRSHandler"
+            id="dprs.views.RunDPRS"
+            name="DPRS">
+      </command>
+   </extension>
+   
+   <extension
+          point="org.eclipse.ui.decorators">
+       <decorator
+             class="dprs.views.ProjectScoreDecorator"
+             id="dprs.views.RunDPRSDecorator"
+             label="Project Score Decorator"
+             lightweight="true"
+             state="true">
+       </decorator>
+    </extension>
+    
+    
+    
+    
+    
+    <extension
+            id="dprs.views.customtextmarker"
+            name="DPRS Markers"
+            point="org.eclipse.core.resources.markers">
+         <super
+               type="org.eclipse.core.resources.textmarker">
+         </super>
+	</extension>
+	<extension
+            point="org.eclipse.ui.editors.annotationTypes">
+         <type
+               markerType="org.eclipse.core.resources.textmarker"
+               name="dprs.views.customtextmarker">
+         </type>
+	</extension>
+	<extension
+         point="org.eclipse.ui.editors.markerAnnotationSpecification">
+      <specification
+            annotationType="dprs.views.customtextmarker"
+            colorPreferenceKey="dprs.views.color"
+            colorPreferenceValue="173,255,47"
+            contributesToHeader="false"
+            highlightPreferenceKey="dprs.views.highlight"
+            highlightPreferenceValue="true"
+            includeOnPreferencePage="true"
+            label="Color Marker"
+            overviewRulerPreferenceKey="dprs.views.overview"
+            overviewRulerPreferenceValue="true"
+            presentationLayer="0"
+            textPreferenceKey="dprs.views.text"
+            textPreferenceValue="true"
+            textStylePreferenceValue="BOX"
+            verticalRulerPreferenceKey="dprs.views.ruler"
+            verticalRulerPreferenceValue="true">
+      </specification>
+	</extension>
+	<extension
+            id="org.eclipse.core.resources.methodclonesmarker"
+            name="MethodClonesMarker"
+            point="org.eclipse.core.resources.markers">
+         <super
+               type="org.eclipse.core.resources.textmarker">
+         </super>
+	</extension>
+	<extension
+            point="org.eclipse.ui.editors.annotationTypes">
+         <type
+               markerType="org.eclipse.core.resources.textmarker"
+               name="org.eclipse.core.resources.methodclonesmarker">
+         </type>
+	</extension>
+	<extension
+            point="org.eclipse.ui.editors.markerAnnotationSpecification">
+         <specification
+               annotationType="org.eclipse.core.resources.methodclonesmarker"
+               colorPreferenceKey="dprs.views.color1"
+               colorPreferenceValue="173,255,47"
+               contributesToHeader="false"
+               highlightPreferenceKey="dprs.views.highlight1"
+               highlightPreferenceValue="true"
+               includeOnPreferencePage="true"
+               label="Participating Method"
+               overviewRulerPreferenceKey="dprs.views.overview1"
+               overviewRulerPreferenceValue="true"
+               presentationLayer="0"
+               textPreferenceKey="dprs.views.text1"
+               textPreferenceValue="true"
+               textStylePreferenceValue="BOX"
+               verticalRulerPreferenceKey="dprs.views.ruler1"
+               verticalRulerPreferenceValue="true">
+         </specification>
+	</extension>
+</plugin>

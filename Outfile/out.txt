@@ -1,0 +1,11 @@
+0	0.052	param (56) triangular (33) pentagonal (23) octosquare (23) clicks (22) intermediate (20) real (17) loader (16) define (13) dynamic (12) 
+1	0.031	key (658) text (184) menu (176) robot (83) status (83) configuration (81) user (76) game (71) board (65) tiles (54) 
+2	0.090	event (168) mouse (141) evt (101) param (74) win (70) method (57) ener (55) object (55) occurred (48) awt (45) 
+3	0.055	game (87) board (71) tile (34) param (31) column (25) line (23) difficulty (21) event (20) located (19) relief (15) 
+4	0.105	dialog (209) custom (61) mines (46) text (38) times (38) margin (37) statistics (34) param (30) component (29) user (28) 
+5	0.010	items (45) robot (41) menu (40) create (28) schemas (25) menus (22) add (22) map (20) param (20) configure (18) 
+6	0.415	action (309) event (147) param (129) item (129) menu (123) methods (121) user (107) attributes (87) version (85) serial (84) 
+7	0.111	color (114) change (112) feel (53) background (48) lcd (40) mines (39) identifier (31) methods (29) configuration (27) smiley (25) 
+8	0.068	video (76) sound (45) timer (43) play (39) param (39) save (36) game (24) clip (22) actions (22) mines (22) 
+9	0.063	grid (137) tiles (124) tile (119) number (105) param (101) shape (92) height (63) width (63) mines (51) initialize (37) 
+0	0.9387624765632828
